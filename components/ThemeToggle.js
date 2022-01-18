@@ -6,16 +6,16 @@ const ThemeToggle = () => {
     const changeTheme = () => {
         setToggle(p => !p);
         if (toggle) {
-            document.querySelector("body").classList.add("dark")
-        } else {
             document.querySelector("body").classList.remove("dark")
+        } else {
+            document.querySelector("body").classList.add("dark")
         }
     }
 
     return (
         <button className='toggle-btn' onClick={changeTheme}>
             {
-                !toggle ? "light" : "dark"
+                toggle ? "light" : "dark"
             } mode
         </button>
     )

@@ -11,7 +11,6 @@ const ThemeToggle = () => {
             document.querySelector("body").classList.add("dark")
         }
     }
-
     return (
         <button className='toggle-btn' onClick={changeTheme}>
             {

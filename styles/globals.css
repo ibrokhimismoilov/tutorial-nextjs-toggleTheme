@@ -1,16 +1,54 @@
+/* .light-theme */
+:root {
+  --bg-site: #fff;
+  --text: #000;
+  --link: darkred;
+}
+
+/* .dark-theme */
+
+body.dark {
+  --bg-site: #000;
+  --text: #fff;
+  --link: yellow;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--bg-site);
+  color: var(--text);
 }
 
 a {
-  color: inherit;
+  color: var(--link);
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  padding: 15px;
+  margin-top: auto;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
